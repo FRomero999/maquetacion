@@ -1,0 +1,128 @@
+$paddingheader : 1rem;
+
+*{ --outline:solid red;}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+    text-align: center;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position:sticky;
+    top:0;
+    background-color: white;
+
+    img{
+        height:75px;
+        margin: 5px;
+    }
+
+    nav{
+        align-self: stretch;
+        background-color: black;
+        color:white;
+        display:flex;
+        justify-content:space-between;
+
+        ul{
+            display:flex;
+            list-style-type: none;
+            margin:0;
+            padding:0;
+
+            li{
+                position: relative;
+                padding: $paddingheader;
+                font-size:1.5rem;
+                color:white;
+
+                &:hover{
+                    text-shadow: 2px 2px 3px lightblue;
+                    background-color: darkgray;
+                }                
+            }
+
+        }
+
+        ul li:hover ul.submenu{
+            display: flex;
+            min-width:30rem;
+
+            &.izq{
+                right:0;
+                left:auto;
+            }
+        }
+
+        ul.submenu{
+            display:none;
+            flex-direction:column;
+            position:absolute;
+            top:3.5*$paddingheader;
+            left: 0;
+            background: black;
+        }
+
+        a{
+            color:white;
+            text-decoration: none;
+        }
+    }
+
+    nav.megamenu{
+        padding:1rem;
+        gap:5rem;
+        display:none;
+
+        &.reveal{
+            display:flex;
+        }
+    }
+
+
+}
+
+
+nav.offcanvas{
+    padding: $paddingheader*2;
+    display:flex;
+    flex-direction: column;
+    
+    box-sizing:border-box;
+
+    transition: margin-left 1s;
+
+    font-size: 1.5rem;
+    width: 20rem;
+    height:100vh;
+    position:fixed;
+    top:0;
+    bottom:0;
+    
+    z-index: 9;
+
+    background-color: rgba(0, 0, 255, 0.904);
+    color:white;
+
+    margin-left:-20rem;
+
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+
+    a{
+        color:white;
+    }
+}
+
+nav.offcanvas.reveal{
+    margin-left: 0;
+}
