@@ -41,6 +41,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(27, 168, 250);
 }
 footer div.columnas {
   width: 100%;
@@ -49,8 +50,21 @@ footer div.columnas {
 }
 footer div.columnas div {
   flex: 1;
-  outline: solid;
   padding: 1rem;
+  color: white;
+}
+footer div.columnas div ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+footer div.columnas div a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  display: block;
+}
+footer div.columnas div a:hover {
+  text-decoration: underline;
 }
 footer div.columnas div:nth-child(1) {
   flex: 2;
