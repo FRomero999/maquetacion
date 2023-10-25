@@ -6,88 +6,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-footer {
-  text-align: center;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
-header img {
-  height: 75px;
-  margin: 5px;
-}
-header nav {
-  align-self: stretch;
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-header nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-header nav ul li {
-  position: relative;
-  padding: 1rem;
-  font-size: 1.5rem;
-  color: white;
-}
-header nav ul li:hover {
-  text-shadow: 2px 2px 3px lightblue;
-  background-color: darkgray;
-}
-header nav ul li:hover ul.submenu {
-  display: flex;
-  min-width: 30rem;
-}
-header nav ul li:hover ul.submenu.izq {
-  right: 0;
-  left: auto;
-}
-header nav ul.submenu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 3.5rem;
-  left: 0;
-  background: black;
-}
-header nav a {
-  color: white;
-  text-decoration: none;
-}
-header nav.megamenu {
-  padding: 1rem;
-  gap: 5rem;
-  display: none;
-}
-header nav.megamenu.reveal {
-  display: flex;
-}
-
 nav.offcanvas {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   transition: margin-left 1s;
-  font-size: 1.5rem;
+  font-size: 14px;
   width: 20rem;
   height: 100vh;
   position: fixed;
   top: 0;
   bottom: 0;
   z-index: 9;
-  background-color: rgba(0, 0, 255, 0.904);
+  background-color: rgba(255, 136, 0, 0.849);
   color: white;
   margin-left: -20rem;
 }
@@ -102,4 +34,139 @@ nav.offcanvas a {
 
 nav.offcanvas.reveal {
   margin-left: 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer div.columnas {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+footer div.columnas div {
+  flex: 1;
+  outline: solid;
+  padding: 1rem;
+}
+footer div.columnas div:nth-child(1) {
+  flex: 2;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+}
+header img {
+  height: 75px;
+  margin: 5px;
+}
+header nav {
+  align-self: stretch;
+  background-color: rgb(27, 168, 250);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  position: relative;
+  padding: 1rem;
+  font-size: 14px;
+  color: white;
+}
+header nav ul li:hover {
+  text-shadow: 2px 2px 3px lightblue;
+  background-color: darkgray;
+}
+header nav ul li:hover ul.submenu {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+header nav ul li:hover ul.submenu.izq {
+  right: 0;
+  left: auto;
+}
+header nav ul.submenu {
+  min-width: 30rem;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  top: calc(2rem + 14px);
+  left: 0;
+  background: rgb(27, 168, 250);
+  z-index: 9;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+header nav.megamenu {
+  position: relative;
+}
+header nav.megamenu .inner {
+  padding: 1rem;
+  gap: 5rem;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+  position: absolute;
+  background-color: rgb(27, 168, 250);
+}
+header nav.megamenu.reveal .inner {
+  opacity: 1;
+  visibility: visible;
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: white;
+  color: blue;
+  font-size: 3rem;
+}
+@keyframes spin {
+  0% {
+    border-color: blue;
+  }
+  50% {
+    border-color: red;
+  }
+  100% {
+    border-color: blue;
+  }
+}
+#loader div {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid;
+  border-width: 150px;
+  animation: spin 1s linear infinite;
+}
+#loader.finished {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

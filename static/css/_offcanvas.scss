@@ -1,0 +1,39 @@
+@use 'vars';
+
+nav.offcanvas{
+    padding: vars.$paddingheader*2;
+    display:flex;
+    flex-direction: column;
+    
+    box-sizing:border-box;
+
+    transition: margin-left 1s;
+
+    font-size: vars.$tamaño_letra_menu;
+    width: 20rem;
+    height:100vh;
+    position:fixed;
+    top:0;
+    bottom:0;
+    
+    z-index: 9;
+
+    background-color: vars.$color_fondo_offcanvas;
+    color:vars.$color_fuente_menu;
+
+    margin-left:-20rem;
+
+    ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+
+    a{
+        color:vars.$color_fuente_menu;
+    }
+}
+
+nav.offcanvas.reveal{
+    margin-left: 0;
+}
