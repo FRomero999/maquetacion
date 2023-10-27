@@ -13,6 +13,7 @@ header{
     background-color: vars.$color_fondo_header;
     position: sticky;
     top:0px;
+    z-index: 9;
 
     img{
         height:75px;
@@ -147,5 +148,19 @@ header{
 
     &.finished{
         display:none;
+    }
+}
+
+section.boxed{
+    max-width: vars.$anchura_pagina;
+    margin:auto;
+
+    &:has(> div){
+        max-width:none;
+        width:100%;
+        div{
+            max-width: vars.$anchura_pagina;
+            margin:auto;    
+        }
     }
 }
