@@ -247,12 +247,44 @@ header nav.megamenu.reveal .inner {
 section.boxed {
   max-width: 960px;
   margin: auto;
+  padding: 2rem 0;
 }
-section.boxed:has(> div) {
+section.boxed:has(> div.inner) {
   max-width: none;
   width: 100%;
 }
-section.boxed:has(> div) div {
+section.boxed:has(> div.inner) div {
   max-width: 960px;
   margin: auto;
+}
+
+div.col2 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+div.col2 > * {
+  flex: 1;
+}
+div.col2 div {
+  padding: 2rem;
+  font-size: 2rem;
+}
+div.col2 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.boxed:has(div.col2) div.col2 > * {
+  max-width: 480px;
+}
+
+div#totop {
+  position: fixed;
+  padding: 1rem;
+  border: solid;
+  border-radius: 6px;
+  background-color: white;
+  bottom: -6px;
+  right: 10rem;
 }/*# sourceMappingURL=style.css.map */

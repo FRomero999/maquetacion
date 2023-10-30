@@ -153,9 +153,10 @@ header{
 
 section.boxed{
     max-width: vars.$anchura_pagina;
-    margin:auto;
+    margin: auto;
+    padding: 2rem 0;
 
-    &:has(> div){
+    &:has(> div.inner){
         max-width:none;
         width:100%;
         div{
@@ -163,4 +164,42 @@ section.boxed{
             margin:auto;    
         }
     }
+}
+
+div.col2{
+    display:flex;
+    justify-content: center;
+    align-items: stretch;
+
+    >*{
+     flex:1;
+     //max-width: calc(vars.$anchura_pagina / 2);
+    }
+
+    div{
+        padding:2rem;
+        font-size:2rem;
+    }
+
+    img{
+        object-fit: cover;
+    }
+
+}
+
+section.boxed:has(div.col2){
+    div.col2>*{
+        max-width: calc(vars.$anchura_pagina / 2);
+    }
+}
+
+
+div#totop{
+    position:fixed;
+    padding:1rem;
+    border:solid;
+    border-radius: 6px;
+    background-color: white;
+    bottom:-6px;
+    right:10rem;
 }
