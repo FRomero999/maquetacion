@@ -25,8 +25,25 @@ window.addEventListener("load",()=>{
     loader.classList.add("finished");
 })
 
-document.addEventListener("scroll",()=>{
-    console.log( window.scrollY );
-    if(window.scrollY>window.innerHeight) console.log("totop!");
-});
+document.addEventListener("scroll", debounce(eventoScroll) );
 
+function eventoScroll(){
+    if( window.scrollY > window.innerHeight ) totop.classList.add("reveal");
+    else  totop.classList.remove("reveal");
+
+   /* if(window.scrollY> 1500){
+        document.body.style.backgroundColor="green";
+    }*/
+}
+
+
+function debounce( fn ){
+
+    let timer;
+
+    return ()=>{
+        if(timer) clearTimeout(timer);
+        timer = setTimeout( fn, 300);
+    }
+
+}

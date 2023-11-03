@@ -3,7 +3,7 @@
 @use "offcanvas";
 @use "footer";
 @use "hero";
-
+@use "gallery";
 
 
 header{
@@ -200,6 +200,11 @@ div#totop{
     border:solid;
     border-radius: 6px;
     background-color: white;
-    bottom:-6px;
     right:10rem;
+    bottom: -5rem;
+    transition: 0.3s;
+
+    &.reveal{
+        bottom:-6px;
+    }
 }
