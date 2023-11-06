@@ -245,8 +245,8 @@ dialog{
         }
 
         p.info{
-            //visibility: hidden;
-            display:none;
+            visibility: hidden;
+            //display:none;
             color:blue;
             font-size:0.75rem;
             margin:0;
@@ -261,8 +261,8 @@ dialog{
             color:blue;
         }
         p.info{
-            //visibility: visible;
-            display:block;
+            visibility: visible;
+            //display:block;
         }
     }
 }
