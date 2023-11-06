@@ -8,6 +8,10 @@ const loader = document.querySelector("#loader");
 
 const totop = document.querySelector("#totop");
 
+const dialog = document.querySelector("#dialogRegistro");
+const btnRegistro = document.querySelector("#btnRegistro");
+
+
 /*
 enlace.addEventListener("click", function(){
     megamenu.classList.toggle("reveal");
@@ -35,6 +39,10 @@ function eventoScroll(){
         document.body.style.backgroundColor="green";
     }*/
 }
+
+btnRegistro.addEventListener("click",()=>{
+    dialog.showModal();
+})
 
 
 function debounce( fn ){

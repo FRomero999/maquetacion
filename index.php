@@ -1,4 +1,29 @@
 <?php require("views/header.php"); ?>
+
+
+    <dialog id="dialogRegistro">
+        <form method="dialog">
+            <h1>Registro</h1>
+            <div>
+                <label for="txtEmail">Correo electrónico</label>
+                <input type="email" name="email" id="txtEmail" placeholder="Introduce tu email">
+                <p class="info">El email es obligatorio</p>
+            </div>
+            <div>
+                <label for="txtUsername">Nombre de usuario</label>
+                <input type="text" name="username" id="txtUsername" placeholder="Introduce tu nombre de usuario">
+            </div>
+            <div>
+                <label for="txtContraseña">Contraseña</label>
+                <input type="password" name="password" id="txtContraseña" placeholder="Elige una contraseña">
+                <p class="info">La contraseña debe contenes mayusculas y caracteres especiales</p>
+            </div>
+            <div>
+                <input type="submit" value="Registrar usuario">
+            </div>
+        </form>
+    </dialog>
+
     <main>
 
         <section id="hero">
@@ -6,7 +31,7 @@
             <div>
                 <h1>Nombre de mi página</h1>
                 <p>La mejor tienda online del universo virtual</p>
-                <a href="#">Ver novedades</a>
+                <a href="#" id="btnRegistro">Registrate</a>
             </div>
         </section>
 
