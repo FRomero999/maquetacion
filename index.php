@@ -2,6 +2,7 @@
 
 
     <dialog id="dialogRegistro">
+        <div>
         <form method="dialog">
             <h1>Registro</h1>
             <div>
@@ -22,6 +23,7 @@
                 <input type="submit" value="Registrar usuario">
             </div>
         </form>
+        </div>
     </dialog>
 
     <main>

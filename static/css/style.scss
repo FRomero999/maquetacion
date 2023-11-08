@@ -4,6 +4,7 @@
 @use "footer";
 @use "hero";
 @use "gallery";
+@use "admin";
 
 
 header{
@@ -215,7 +216,7 @@ dialog::backdrop{
     backdrop-filter: blur(3px);
 }
 
-dialog{
+dialog>div{
     padding:1rem;
     display:flex;
     flex-direction: column;

@@ -190,6 +190,65 @@ section.gallery div figure figcaption {
   align-items: center;
 }
 
+main.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+main.admin p.total span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 2px yellow;
+}
+main.admin div:has(table) {
+  margin: 2rem;
+  height: 500px;
+  overflow-y: scroll;
+  position: relative;
+}
+main.admin table {
+  border: solid;
+  border-collapse: collapse;
+}
+main.admin table thead {
+  position: sticky;
+  top: 0px;
+}
+main.admin table thead tr {
+  border: solid 3px black;
+}
+main.admin table td, main.admin table th {
+  border: solid 2px black;
+  padding: 1rem 2rem;
+}
+main.admin table td.options div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  visibility: hidden;
+}
+main.admin table td.options {
+  border: none;
+}
+main.admin table tr:hover td.options div {
+  visibility: visible;
+}
+main.admin table th {
+  background-color: rgb(27, 168, 250);
+  color: white;
+}
+main.admin table tr:hover {
+  background-color: rgb(27, 168, 250) !important;
+  color: white;
+}
+main.admin table tr:has(input[type=checkbox]:checked) {
+  background-color: orange;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -361,7 +420,7 @@ dialog::backdrop {
           backdrop-filter: blur(3px);
 }
 
-dialog {
+dialog > div {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -369,24 +428,24 @@ dialog {
   justify-content: center;
   align-items: center;
 }
-dialog h1 {
+dialog > div h1 {
   text-align: center;
 }
-dialog div {
+dialog > div div {
   margin: 0.5rem;
   padding: 0.5rem;
 }
-dialog div input {
+dialog > div div input {
   padding: 0.5rem;
 }
-dialog div input:focus {
+dialog > div div input:focus {
   background-color: rgba(173, 216, 230, 0.788);
 }
-dialog div label {
+dialog > div div label {
   display: inline-block;
   width: 140px;
 }
-dialog div p.info {
+dialog > div div p.info {
   visibility: hidden;
   color: blue;
   font-size: 0.75rem;
@@ -394,12 +453,12 @@ dialog div p.info {
   padding: 0;
   text-align: right;
 }
-dialog div:has(input:focus) {
+dialog > div div:has(input:focus) {
   background-color: whitesmoke;
 }
-dialog div:has(input:focus) label {
+dialog > div div:has(input:focus) label {
   color: blue;
 }
-dialog div:has(input:focus) p.info {
+dialog > div div:has(input:focus) p.info {
   visibility: visible;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,76 @@
+@use "vars";
+
+main.admin{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    gap:1rem;
+
+    p.total span{
+        font-size:1.5rem;
+        font-weight: bold;
+        text-shadow: 0 0 2px yellow;
+    }
+
+    div:has(table){
+       margin:2rem;
+       height:500px;
+       overflow-y: scroll;
+       position:relative;
+    }
+
+    table{
+        border:solid;
+        border-collapse: collapse;
+
+        thead{
+            position:sticky;
+            top:0px;
+            
+            tr{
+                border:solid 3px black;
+            }
+
+        }
+
+        td,th{
+            border:solid 2px black;
+            padding:1rem 2rem;
+        }
+
+        td.options div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:1rem;
+            visibility: hidden;
+        }
+
+        td.options{
+            border: none;
+        }
+
+        tr:hover td.options div{
+            visibility: visible;
+        }
+
+        th{
+            background-color: vars.$color_fondo_menu;
+            color: vars.$color_fuente_menu;
+        }
+
+        tr:hover{
+            background-color: vars.$color_fondo_menu !important;
+            color: vars.$color_fuente_menu;
+        }
+
+        tr:has(input[type=checkbox]:checked){
+          background-color: orange;  
+        }
+
+    }
+
+}
