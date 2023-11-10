@@ -11,16 +11,20 @@ const totop = document.querySelector("#totop");
 const dialog = document.querySelector("#dialogRegistro");
 const btnRegistro = document.querySelector("#btnRegistro");
 
+const btnMinimize = document.querySelector("#minimize");
+const menuAdmin = document.querySelector("div.admin aside");
 
-/*
+
+
 enlace.addEventListener("click", function(){
+    console.log("sda");
     megamenu.classList.toggle("reveal");
 });
-*/
+
 
 enlace.addEventListener("click", () => megamenu.classList.toggle("reveal") );
 
-enlace_menu_usuario.addEventListener("click", function(){
+if(enlace_menu_usuario) enlace_menu_usuario.addEventListener("click", function(){
     offcanvas.classList.toggle("reveal");
 })
 
@@ -40,9 +44,10 @@ function eventoScroll(){
     }*/
 }
 
-btnRegistro.addEventListener("click",()=>{
+
+/* btnRegistro.addEventListener("click",()=>{
     dialog.showModal();
-})
+})*/
 
 
 function debounce( fn ){
@@ -55,3 +60,7 @@ function debounce( fn ){
     }
 
 }
+
+btnMinimize.addEventListener("click", ()=>{
+    menuAdmin.classList.toggle("minimize");
+})

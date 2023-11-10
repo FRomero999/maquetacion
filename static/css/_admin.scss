@@ -1,7 +1,52 @@
 @use "vars";
 
-main.admin{
 
+div.admin{
+    display:flex;
+
+    aside{
+        width:200px;
+        background-color: vars.$color_fondo_menu;
+        display:flex;
+        align-items: stretch;
+        gap:10px;
+        flex-direction: column;
+
+        &.minimize{
+            width:60px;
+            span{
+                display: none;
+            }
+        }
+
+        div.separator{
+            height:1px;
+            background-color:white;
+            margin:10px;            
+        }
+
+
+        a{
+            display: flex;
+            text-decoration: none;
+            color:white;
+            padding:1rem 0.5rem;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover{
+                background-color: aliceblue;
+                color: black
+            }
+        }
+    }
+
+}
+
+
+
+main.admin{
+    flex:1;
     display:flex;
     flex-direction: column;
     align-items: center;

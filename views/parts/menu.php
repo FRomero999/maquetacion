@@ -28,5 +28,6 @@
     </ul>
     <ul>
         <li><a href="#" id="menu_usuario">Menu Usuario</a></li>
+        <!--li><input type="search"></li-->
     </ul>                      
 </nav>

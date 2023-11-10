@@ -190,7 +190,53 @@ section.gallery div figure figcaption {
   align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+  section.gallery div figure {
+    width: 100px;
+    height: 100px;
+  }
+  section.gallery div {
+    gap: 0.5rem;
+    background-color: yellow;
+  }
+}
+div.admin {
+  display: flex;
+}
+div.admin aside {
+  width: 200px;
+  background-color: rgb(27, 168, 250);
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  flex-direction: column;
+}
+div.admin aside.minimize {
+  width: 60px;
+}
+div.admin aside.minimize span {
+  display: none;
+}
+div.admin aside div.separator {
+  height: 1px;
+  background-color: white;
+  margin: 10px;
+}
+div.admin aside a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0.5rem;
+  justify-content: center;
+  gap: 1rem;
+}
+div.admin aside a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
 main.admin {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,6 +356,17 @@ header nav a {
   color: white;
   text-decoration: none;
 }
+header nav input[type=search] {
+  position: absolute;
+  right: 1rem;
+  width: 2rem;
+  transition: 0.3s;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+}
+header nav input[type=search]:focus {
+  width: 10rem;
+}
 header nav.megamenu {
   position: relative;
 }
@@ -400,6 +457,32 @@ section.boxed:has(div.col2) div.col2 > * {
   max-width: 480px;
 }
 
+@media only screen and (max-width: 860px) {
+  section.boxed:has(div.col2) div.col2 > * {
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  section.boxed {
+    display: none;
+  }
+}
+@media only screen and (min-width: 840px) {
+  .show_desktop {
+    display: block !important;
+  }
+  .hide_desktop {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .show_mobile {
+    display: block !important;
+  }
+  .hide_mobile {
+    display: none !important;
+  }
+}
 div#totop {
   position: fixed;
   padding: 1rem;

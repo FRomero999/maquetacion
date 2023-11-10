@@ -33,7 +33,9 @@
             <div>
                 <h1>Nombre de mi página</h1>
                 <p>La mejor tienda online del universo virtual</p>
-                <a href="#" id="btnRegistro">Registrate</a>
+                <a href="#" id="btnRegistro" class="hide_mobile">Registrate</a>
+                <a href="#" id="btnRegistro" class="hide_desktop show_mobile">Llámanos a la tienda</a>
+
             </div>
         </section>
 

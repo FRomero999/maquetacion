@@ -76,6 +76,19 @@ header{
             color:vars.$color_fuente_menu;
             text-decoration: none;
         }
+
+        input[type=search]{
+            position:absolute;
+            right:1rem;
+            width:2rem;
+            transition:0.3s;
+            padding:0.3rem;
+            font-size: 1.3rem;
+            &:focus{
+                width:10rem;
+            }
+        }
+
     }
 
 
@@ -192,6 +205,38 @@ section.boxed:has(div.col2){
     div.col2>*{
         max-width: calc(vars.$anchura_pagina / 2);
     }
+}
+
+@media only screen and (max-width:860px) {
+    section.boxed:has(div.col2) div.col2 > * {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width:640px){
+    section.boxed{
+        display:none;
+    }
+}
+
+@media only screen and (min-width:840px){
+  .show_desktop{
+    display:block !important;
+  }
+  
+  .hide_desktop{
+    display:none !important;
+  }
+}
+
+@media only screen and (max-width:840px){
+    .show_mobile{
+        display:block !important;
+      }
+      
+      .hide_mobile{
+        display:none !important;
+      }
 }
 
 
